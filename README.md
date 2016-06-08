@@ -8,8 +8,7 @@ Postulant : Daniel Gutiérrez
 
 Main: cl.danielgutierrez.baires.ex1.AppEx1
 
-The Factorial class that include a static method factorialWithStack,
-the solution was implemented using the java.util.Stack structure for calculate the factorial.
+The solution was implemented using the java.util.Stack structure for calculate the factorial.
 
 
 

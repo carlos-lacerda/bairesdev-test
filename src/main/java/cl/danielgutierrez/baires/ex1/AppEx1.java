@@ -11,6 +11,7 @@ public class AppEx1 {
         System.out.println(new Factorial(6));
         System.out.println(new Factorial(8));
         System.out.println(new Factorial(1));
+
     }
 
 

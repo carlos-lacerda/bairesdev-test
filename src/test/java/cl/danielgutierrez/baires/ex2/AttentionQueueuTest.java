@@ -2,7 +2,7 @@ package cl.danielgutierrez.baires.ex2;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author daniel.gutierrez
