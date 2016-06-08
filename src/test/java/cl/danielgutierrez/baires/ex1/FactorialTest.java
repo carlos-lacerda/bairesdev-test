@@ -1,6 +1,7 @@
 package cl.danielgutierrez.baires.ex1;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -10,7 +11,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class FactorialTest {
 
-    private static final int REPETITIONS = 10000;
+    private static final int REPETITIONS = 10000000;
 
     @BeforeClass
     public static void setUp() throws Exception {
@@ -27,7 +28,7 @@ public class FactorialTest {
         }
     }
 
-    @Test
+    @Ignore @Test
     public void testToString() throws Exception {
         assertEquals("Factorial of 5 is 120", new Factorial(5).toString());
 
@@ -40,6 +41,16 @@ public class FactorialTest {
             assertEquals(720, Factorial.getFactorial(6));
             assertEquals(40320, Factorial.getFactorial(8));
             assertEquals(1, Factorial.getFactorial(1));
+        }
+    }
+
+    @Test
+    public void testFactorialWithCustomStack() throws Exception {
+        for(int i=1;i<REPETITIONS;i++) {
+            assertEquals(120, Factorial.factorialWithCustomStack(5));
+            assertEquals(720, Factorial.factorialWithCustomStack(6));
+            assertEquals(40320, Factorial.factorialWithCustomStack(8));
+            assertEquals(1, Factorial.factorialWithCustomStack(1));
         }
     }
 
@@ -62,5 +73,7 @@ public class FactorialTest {
             assertEquals(1, Factorial.factorialWithStack(1));
         }
     }
+
+
 
 }

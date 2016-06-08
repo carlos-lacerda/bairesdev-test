@@ -15,6 +15,7 @@ public class Factorial{
         this.value = factorialWithStack(n);
     }
 
+
     @Override
     public String toString() {
         return "Factorial of "+this.num+" is "+this.value;
@@ -34,6 +35,16 @@ public class Factorial{
         return stack.pop();
     }
 
+    static FixedStack stack;
+    public static int factorialWithCustomStack(int n){
+        stack = new FixedStack(n);
+        int factorial = 1;
+        while(stack.isNotEmpty()) factorial *= stack.pop();
+        return factorial;
+    }
+
+
+
     @Deprecated
     public static int getFactorial(int n){
         int result = 1;
@@ -50,4 +61,28 @@ public class Factorial{
 
 
 
+
+}
+
+class FixedStack {
+
+    private int[] arr;
+    private int[] tmp;
+
+    FixedStack(int n) {
+        this.arr = new int[n-1];
+        int idx = 0;
+        while(n>1) arr[idx++] = n--;
+    }
+
+    int pop(){
+        tmp = arr.clone();
+        arr = new int[tmp.length-1];
+        System.arraycopy(tmp, 1, arr, 0, tmp.length - 1);
+        return tmp[0];
+    }
+
+    boolean isNotEmpty(){
+        return arr.length > 0;
+    }
 }
