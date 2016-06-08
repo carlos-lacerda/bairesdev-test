@@ -1,7 +1,5 @@
 package cl.danielgutierrez.baires.ex1;
 
-import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -29,9 +27,6 @@ public class FactorialTest {
         assertEquals("Factorial of 5 is 120", new Factorial(5).toString());
 
     }
-
-
-
 
 
 }

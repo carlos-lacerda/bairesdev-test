@@ -18,6 +18,7 @@ public class Factorial{
 
     public static int fixedStackImpl(int n){
         FixedStack stack = new FixedStack(n);
+        while(n>1) stack.push(n--);
         int factorial = 1;
         while(stack.isNotEmpty()) {
             factorial *= stack.pop();
